@@ -8,6 +8,9 @@ app.use(bodyParser.json());
 app.use(cors());
 // ... (your imports and setup)
 
+// const BASE_URL=process.env.BASE_URL;
+const PORT =process.env.PORT||5001
+
 app.post("/chat", async (req, res) => {
   const { prompt } = req.body;
   const apiKey = process.env.API_KEY_OPENAI;
@@ -41,7 +44,7 @@ app.post("/chat", async (req, res) => {
 });
 
 // ... (your server setup and listen)
-const port = 5001;
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
+// const port = 5001;
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
 });
