@@ -15,7 +15,7 @@ function App() {
 
     //communicate with API
     axios
-      .post("https://chatgpt-bakend.onrender.com", { prompt })
+      .post("https://chatgpt-bakend.onrender.com/chat", { prompt })
       .then((res) => {
         setResponse(res.data);
         console.log("data : " + res.data);
